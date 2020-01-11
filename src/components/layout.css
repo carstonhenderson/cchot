@@ -3,3 +3,7 @@
 @tailwind components;
 
 @tailwind utilities;
+
+input[type='date'] {
+  -webkit-appearance: none;
+}

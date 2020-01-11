@@ -3,7 +3,7 @@ import moment from 'moment'
 
 const dateResponse = ({ date, available }) => (
   <>
-    <h1 className="text-xl">
+    <h1 className="text-xl px-2 text-center">
       Can Carston hang out{' '}
       {date.isSame(moment(), 'day')
         ? 'today'
