@@ -5,7 +5,7 @@ const datePicker = ({ date, handleChange }) => (
     type="date"
     value={date}
     onChange={handleChange}
-    className="bg-gray-800 rounded py-2 px-4 appearance-none leading-normal w-full"
+    className="bg-gray-800 rounded py-2 px-4 appearance-none leading-normal w-full shadow"
   />
 )
 
