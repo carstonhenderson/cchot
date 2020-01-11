@@ -13,7 +13,17 @@ const DateChecker = () => {
     if (day === 'Monday' || day === 'Tuesday') {
       setAvailability(false)
     } else if (day === 'Friday' || day === 'Saturday' || day === 'Sunday') {
-      setAvailability(false)
+      // First weekend of 2020 is Kennedy
+      const control =
+        day === 'Friday'
+          ? moment('2020-01-03')
+          : day === 'Saturday'
+          ? moment('2020-01-04')
+          : moment('2020-01-05')
+
+      date.diff(control, 'days') % 2 === 0
+        ? setAvailability(true)
+        : setAvailability(false)
     } else {
       setAvailability(true)
     }
@@ -29,7 +39,7 @@ const DateChecker = () => {
 
   return (
     <div className="h-screen flex flex-col justify-between items-center py-8 w-full max-w-md">
-      <DateResponse available={availability} />
+      <DateResponse date={date} available={availability} />
       <DatePicker
         date={date.format('YYYY-MM-DD')}
         handleChange={handleChange}
