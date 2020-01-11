@@ -5,7 +5,7 @@ import DateChecker from '../components/dateChecker'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Can Carston hang out today?" />
     <DateChecker />
   </Layout>
 )
